@@ -55,6 +55,7 @@ end
 group :production do 
   # Use sqlite3 as the database for Active Record
   gem 'pg', '0.18.4'
+  gem 'rake', '13.0.3'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
