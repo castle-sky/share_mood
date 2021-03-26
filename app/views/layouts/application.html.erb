@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShareMood</title>
+    <title><%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header id='header'>
+      <div id='header_title'>
+        <p>share mood</p>
+      </div>
+      <nav id='header_nav'>
+        <ul>
+          <li><%= link_to('home', home_path) %></li>
+          <li><%= link_to('about', about_path) %></li>
+          <li><%= link_to('help', help_path) %></li>
+          <li><%= link_to('contact', contact_path) %></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
